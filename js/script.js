@@ -16,26 +16,30 @@ $(function() {
     })
 });
 
-$(function() {
-    $('.ripple').on('click', function(event) {
-        var $div = $('<div/>');
-        $div.addClass('ripple-effect');
-        $div
-            .css({
-                background: $(this).data("ripple-color")
-            })
-            .appendTo($(this));
-        window.setTimeout(function() {
-            $div.remove();
-        }, 500);
-    });
-
-});
+// $(function() {
+//     $('.ripple').on('click', function(event) {
+//         var $div = $('<div/>');
+//         $div.addClass('ripple-effect');
+//         $div
+//             .css({
+//                 background: $(this).data("ripple-color")
+//             })
+//             .appendTo($(this));
+//         window.setTimeout(function() {
+//             $div.remove();
+//         }, 500);
+//     });
+//
+// });
 
 $(function() {
   var toggle = $('#drawer-toggle');
+  var link = $('.header__nav')
   var overlay = $('.drawer-content-overlay');
   overlay.on('click', function(event) {
+    toggle.prop('checked', false);
+  });
+  link.on('click', function(event) {
     toggle.prop('checked', false);
   });
 });

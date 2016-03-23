@@ -11,7 +11,9 @@
     background: $background-main;
     width: 100%;
     height: 2 * $header-height-mobile;
-    bottom: -2 * $header-height-desktop; //TODO change to mobile
+    bottom: -2 * $header-height-desktop; /*TODO change to mobile*/
+    box-shadow: 0 5px 12px 9px rgba(0,0,0,0.0);
+    -webkit-transition: box-shadow $menu-open-time $menu-open-function, bottom $menu-open-time $menu-open-function;
     transition: box-shadow $menu-open-time $menu-open-function, bottom $menu-open-time $menu-open-function;
 
     ul {
@@ -44,20 +46,20 @@
     }
     @media screen and (min-width: $break-dektop) {
         height: 2 * $header-height-desktop;
-        // ul {
-        //     margin: 0;
-        //     padding: 0;
-        //     list-style: none;
-        // }
-        //
-        // li {
-        //     display: inline-block;
-        // }
-        //
-        // a {
-        //     display: block;
-        //     padding: 6px 2px;
-        // }
+        /* ul {*/
+        /*     margin: 0;*/
+        /*     padding: 0;*/
+        /*     list-style: none;*/
+        /* }*/
+        /**/
+        /* li {*/
+        /*     display: inline-block;*/
+        /* }*/
+        /**/
+        /* a {*/
+        /*     display: block;*/
+        /*     padding: 6px 2px;*/
+        /* }*/
     }
 }
 
@@ -69,6 +71,7 @@
     background: $menu-drawer-content-overlay-background;
     opacity: 0;
     pointer-events: none;
+    -webkit-transition: opacity $menu-open-time $menu-open-function;
     transition: opacity $menu-open-time $menu-open-function;
 }
 
