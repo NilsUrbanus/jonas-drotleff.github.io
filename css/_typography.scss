@@ -1,0 +1,62 @@
+/* compileOnSave: false*/
+/*----------------*/
+/* typography*/
+/*----------------*/
+
+@import 'vars';
+
+html,
+body {
+    font-family: $font-main;
+    color: $color-main;
+    font-size: $font-main-size;
+    font-weight: $font-main-weight;
+}
+
+a {
+    position: relative;
+    overflow: hidden;
+    color: $color-a;
+    text-decoration: none;
+    outline: none;
+    -webkit-transition: color $anim-link-time;
+    transition: color $anim-link-time;
+
+    &::before {
+        content: '';
+        position: absolute;
+        height: 1px;
+        width: 100%;
+        left: 0;
+        top: 50%;
+        background: $color-a;
+        -webkit-transform-origin: left;
+        transform-origin: left;
+        -webkit-transform: scaleX(0);
+        transform: scaleX(0);
+        -webkit-transition: background $anim-link-time, -webkit-transform $anim-link-time;
+        transition: background $anim-link-time, -webkit-transform $anim-link-time;
+        transition: transform $anim-link-time, background $anim-link-time;
+        transition: transform $anim-link-time, background $anim-link-time, -webkit-transform $anim-link-time;
+    }
+
+    &:hover {
+        color: $color-a--hover;
+    }
+
+    &:hover::before {
+        background: $color-a--hover;
+        -webkit-transform: scaleX(1);
+        transform: scaleX(1);
+    }
+}
+
+h1{
+    font-size: $h1-size;
+    font-family: $hX-font;
+    font-weight: $hX-weight;
+}
+h2{
+    @extend h1;
+    font-size: $h2-size;
+}

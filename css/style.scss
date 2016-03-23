@@ -1,0 +1,21 @@
+// compileOnSave: true
+@import 'vars';
+@import 'typography';
+
+html,
+body {
+    margin: 0;
+    background: $background-main;
+    overflow-x: hidden;
+}
+
+.header {
+    position: fixed;
+    height: $header-height-mobile;
+    width: 100%;
+
+    @media screen and (max-width: $break-dektop) {
+        height: $header-height-desktop;
+    }
+    
+}
