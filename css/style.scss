@@ -1,9 +1,13 @@
 // compileOnSave: true
+//----------------
+// style
+//----------------
 @import 'vars';
 @import 'typography';
+@import 'menu';
 
-html,
-body {
+body,
+html {
     margin: 0;
     background: $background-main;
     overflow-x: hidden;
@@ -13,9 +17,23 @@ body {
     position: fixed;
     height: $header-height-mobile;
     width: 100%;
-
-    @media screen and (max-width: $break-dektop) {
+    line-height: $header-height-mobile;
+    z-index: $z-index-header;
+    @media screen and (min-width: $break-dektop) {
         height: $header-height-desktop;
+        line-height: $header-height-desktop;
+        // #drawer-toggle__label {
+        //     display: none;
+        // }
     }
-    
+
+    .header__title {
+        display: none;
+        position: absolute;
+    }
+
+    #drawer-toggle {
+        position: absolute;
+        opacity: 0;
+    }
 }

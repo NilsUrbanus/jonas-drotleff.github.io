@@ -1,7 +1,7 @@
 body {
   background: black;
   color: rgb(205, 205, 205);
-  font-family: 'Roboto Mono', monospace;
+  font-family: 'PT Mono', monospace;
 }
 .typed-cursor {
   opacity: 1;

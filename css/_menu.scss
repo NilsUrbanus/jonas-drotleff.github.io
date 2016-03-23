@@ -1,0 +1,71 @@
+// compileOnSave: false
+//----------------
+// menu
+//----------------
+@import 'vars';
+@import 'hamburger';
+
+.header__nav {
+    z-index: $z-index-drawer;
+    -webkit-box-shadow: 0 5px 12px 9px rgba(0,0,0,0.35);
+    -moz-box-shadow: 0 5px 12px 9px rgba(0,0,0,0.35);
+    box-shadow: 0 5px 12px 9px rgba(0,0,0,0.35);
+    position: fixed;
+    width: 100%;
+    height: 2 * $header-height-mobile;
+    bottom: 0;
+
+    ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        width: 100%;
+    }
+
+    li {
+        display: block;
+        width: 100%;
+    }
+
+    a {
+        height: inherit;
+        display: block;
+        width: 100%;
+        text-align: center;
+    }
+
+    a:hover {
+        height: inherit;
+        background: $menu-a-background--hover;
+        color: $menu-a-color--hover;
+    }
+
+    a::before {
+        display: none;
+    }
+    @media screen and (min-width: $break-dektop) {
+        height: 2 * $header-height-desktop;
+        // ul {
+        //     margin: 0;
+        //     padding: 0;
+        //     list-style: none;
+        // }
+        //
+        // li {
+        //     display: inline-block;
+        // }
+        //
+        // a {
+        //     display: block;
+        //     padding: 6px 2px;
+        // }
+    }
+}
+
+.drawer-content-overlay{
+    position: fixed;
+    height: 100vh - 2 * $header-height-dekstop; //TODO change to mobile
+    width: 100%;
+    z-index: $z-index-drawer-content-overlay;
+    background: $menu-drawer-content-overlay-background;
+}
