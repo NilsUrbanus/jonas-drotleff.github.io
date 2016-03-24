@@ -1,7 +1,7 @@
 var $parent = $('.frontpage');
-var elementCount = 25;
+var elementCount = 60;
 var $canvas;
-var lines = 50;
+var lines = 120;
 var lineA = [];
 var lineB = [];
 var factor = 12;
@@ -158,7 +158,7 @@ function updatePosition(x, y) {
         context.lineWidth = 1;
 
         // set line color
-        context.strokeStyle = '#fff';
+        context.strokeStyle = 'rgba(255, 255, 255, 0.38)';
         context.stroke();
     }
 }
