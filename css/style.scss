@@ -37,3 +37,21 @@ html {
         opacity: 0;
     }
 }
+
+.frontpage{
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100vh;
+    width: 100%;
+}
+
+.element {
+    position: absolute;
+    height: 24px;
+    width: 24px;
+    background: #fff;
+	-moz-border-radius: 12px;
+	-webkit-border-radius: 12px;
+	border-radius: 12px;
+}

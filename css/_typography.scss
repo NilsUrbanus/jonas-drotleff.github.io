@@ -5,6 +5,15 @@
 
 @import 'vars';
 
+@mixin no-highlight {
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    tap-highlight-color: rgba(0, 0, 0, 0);
+    user-select: none;
+}
+
 html,
 body {
     font-family: $font-main;
@@ -59,4 +68,13 @@ h1{
 h2{
     @extend h1;
     font-size: $h2-size;
+}
+
+.material-icons{
+    color: $background-main;
+    font-family: 'Material Icons';
+    font-size: 1em;
+    line-height: 24px;
+    text-align: center;
+    @include no-highlight;
 }
