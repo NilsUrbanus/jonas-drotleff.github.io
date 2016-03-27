@@ -1,0 +1,114 @@
+// compileOnSave: false
+//----------------
+// header
+//----------------
+@import 'vars';
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: $headerHeight;
+  width: 100%;
+  z-index: $headerZ;
+  padding-top: $headerPaddingTop;
+  .header__drawer {
+    display: none;
+  }
+  .header__title {
+    position: absolute;
+    left: 0;
+    padding-left: $headerTitlePaddingLeft + 2*24px;
+    line-height: $headerHeight - 12;
+    height: $headerHeight;
+    width: $headerTitleWidth;
+    color: $colorHeaderTitle;
+    text-transform: uppercase;
+    font-family: $fontHeaderTitle;
+    font-size: $fontHeaderTitleSize;
+    text-decoration: none;
+    //background: $headerTitleBackground;
+    transition: width $fontAAnimationTime ease-in;
+    span {
+      padding: 0;
+      margin: 0;
+    }
+    .title--j::before {
+      content: '';
+      position: absolute;
+      left: $headerTitlePaddingLeft;
+      top: $headerTitleLineTop;
+      height: $headerTitleLineHeight;
+      width: $headerTitleLineLength;
+      background-color: $colorHeaderTitle;
+      transition-duration: $fontAAnimationTime;
+      transition-timing-function: ease-in;
+      transition-property: background-color, width, margin-left;
+    }
+    .title--hidden {
+      opacity: 0;
+      transition: opacity $fontAAnimationTime ease-in;
+    }
+    .title--o {
+      transition-delay: $headerTitleHiddenAnimationDelay * 3;
+    }
+    .title--n {
+      transition-delay: $headerTitleHiddenAnimationDelay * 2;
+    }
+    .title--a {
+      transition-delay: $headerTitleHiddenAnimationDelay * 1;
+    }
+    .title--s {
+      transition-delay: $headerTitleHiddenAnimationDelay * 0;
+    }
+    &:hover {
+      width: $headerTitleWidth--hover;
+      color: $colorHeaderTitle--hover;
+      text-decoration: none;
+      .title--j::before {
+        width: calc(100% - 48px);
+        margin-left: $headerTitlePaddingLeft;
+        background-color: $colorHeaderTitle--hover;
+      }
+      .title--hidden {
+        opacity: 1;
+      }
+      .title--o {
+        transition-delay: $headerTitleHiddenAnimationDelay * 0;
+      }
+      .title--n {
+        transition-delay: $headerTitleHiddenAnimationDelay * 1;
+      }
+      .title--a {
+        transition-delay: $headerTitleHiddenAnimationDelay * 2;
+      }
+      .title--s {
+        transition-delay: $headerTitleHiddenAnimationDelay * 3;
+      }
+    }
+  }
+  .header__nav {
+    position: absolute;
+    right: 0;
+    //background-color: $headerTitleBackground;
+    ul {
+      margin: 0;
+      li {
+        padding: 0;
+        display: inline;
+        padding-right: 24px;
+        a {
+          line-height: $headerHeight;
+          color: $colorHeaderTitle;
+          font-family: $fontHeaderMenu;
+          font-size: $fontHeaderMenuSize;
+          min-width: 48px;
+          text-align: center;
+          text-transform: uppercase;
+          &:hover {
+            color: $colorHeaderTitle--hover;
+          }
+        }
+      }
+    }
+  }
+}

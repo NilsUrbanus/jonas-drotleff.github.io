@@ -1,0 +1,25 @@
+// compileOnSave: false
+//----------------
+// about
+//----------------
+@import 'vars';
+.seperator {
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin-top: 100vh;
+  height: 98px;
+  width: 100%;
+  background-color: rgba(#000, 0);
+  background-image: url("../assets/seperator.svg");
+  background-repeat: repeat-x;
+}
+#about {
+  position: relative;
+  left: 0;
+  height: $aboutHeight;
+  width: $aboutWidth;
+  z-index: $aboutZ;
+  margin-top: calc(100vh + 98px);
+  background: $backgroundMain;
+}

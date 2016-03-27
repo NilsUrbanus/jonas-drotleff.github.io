@@ -2,79 +2,45 @@
 /*----------------*/
 /* typography*/
 /*----------------*/
-
 @import 'vars';
-
 @mixin no-highlight {
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
-    tap-highlight-color: rgba(0, 0, 0, 0);
-    user-select: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  tap-highlight-color: rgba(0, 0, 0, 0);
+  user-select: none;
+  cursor: default;
 }
-
-html,
-body {
-    font-family: $font-main;
-    color: $color-main;
-    font-size: $font-main-size;
-    font-weight: $font-main-weight;
+body,
+html {
+  font-family: $fontMain;
+  color: $colorMain;
+  font-size: $fontMainSize;
+  font-weight: $fontMainWeight;
 }
-
 a {
-    position: relative;
-    overflow: hidden;
-    color: $color-a;
-    text-decoration: none;
-    outline: none;
-    -webkit-transition: color $anim-link-time;
-    transition: color $anim-link-time;
-
-    &::before {
-        content: '';
-        position: absolute;
-        height: 1px;
-        width: 100%;
-        left: 0;
-        top: 50%;
-        background: $color-a;
-        -webkit-transform-origin: left;
-        transform-origin: left;
-        -webkit-transform: scaleX(0);
-        transform: scaleX(0);
-        -webkit-transition: background $anim-link-time, -webkit-transform $anim-link-time;
-        transition: background $anim-link-time, -webkit-transform $anim-link-time;
-        transition: transform $anim-link-time, background $anim-link-time;
-        transition: transform $anim-link-time, background $anim-link-time, -webkit-transform $anim-link-time;
-    }
-
-    &:hover {
-        color: $color-a--hover;
-    }
-
-    &:hover::before {
-        background: $color-a--hover;
-        -webkit-transform: scaleX(1);
-        transform: scaleX(1);
-    }
+  color: $colorA;
+  text-decoration: $fontADecoration;
+  transition: color $fontAAnimationTime ease-in;
+  &:hover {
+    color: $colorA--hover;
+    text-decoration: $fontADecoration--hover;
+  }
 }
-
 h1{
-    font-size: $h1-size;
-    font-family: $hX-font;
-    font-weight: $hX-weight;
+  font-family: $fontH;
+  font-size: $fontH1Size;
+  font-weight: $fontH1Weight;
 }
 h2{
-    @extend h1;
-    font-size: $h2-size;
+  @extend h1;
+  font-size: $fontH2Size;
+  font-weight: $fontH2Weight;
 }
-
-.material-icons{
-    color: $background-main;
-    font-family: 'Material Icons';
-    font-size: 1em;
-    line-height: 24px;
-    text-align: center;
-    @include no-highlight;
+.material-icons {
+  color: $fontMain;
+  font-family: 'Material Icons';
+  font-size: $fontMainSize;
+  //line-height: $fontMainSize;
 }

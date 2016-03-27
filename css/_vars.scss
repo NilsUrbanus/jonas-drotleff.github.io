@@ -3,31 +3,30 @@
 // vars
 //----------------
 
-$font-main: monospace;
-$font-main-size: 1em;
-$font-main-weight: 400;
-$color-main: #636363;
-$color-a: #c8c8c8;
-$color-a--hover: #fff;
-$background-main: #282828;
-$color-transparent: rgba(#fff, 0);
-$hX-font: 'Playfair Display', serif;
-$hX-weight: 700;
-$h1-size: 2.5em;
-$h2-size: 2em;
-$header-height-desktop: 64px;
-$header-height-mobile: 52px;
-$break-dektop: 721px;
-$break-mobile: 720px;
-$anim-link-time: 0.3s;
-$z-index-header: 20;
-    $z-index-drawer: 2;
-    $z-index-drawer-content-overlay: 0;
-    $z-index-drawer-togge: 3;
-$hamburger-background: #c8c8c8;
-$hamburger-background--hover: #fff;
-$menu-a-color--hover: #fff;
-$menu-a-background--hover: #000;
-$menu-drawer-content-overlay-background: rgba(#000, 0.5);
-$menu-open-time: 0.3s;
-$menu-open-function: ease-in;
+@import "vars/colors";
+@import "vars/typography";
+
+// header
+$headerPaddingTop: 16px;
+$headerHeight: 72px;
+$headerZ: 10;
+// header title
+$headerTitlePaddingLeft: 24px;
+$headerTitleBackground: rgba(#000, 0.5);
+$headerTitleWidth: 64px;
+$headerTitleWidth--hover: 160px;
+$headerTitleLineLength: 40px;
+$headerTitleLineHeight: 4px;
+$headerTitleLineTop: calc(50% - 2px);
+$headerTitleHiddenAnimationDelay: 0.03s;
+
+// home
+$homeZ: -2;
+$homeHeight: 100vh;
+$homeWidth: 100%;
+$homeBackgroundImage: url(../assets/background.jpg);
+
+// about
+$aboutZ: -1;
+$aboutHeight: calc(100vh + 98px);
+$aboutWidth: 100%;

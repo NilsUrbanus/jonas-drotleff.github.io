@@ -1,0 +1,31 @@
+// compileOnSave: false
+//----------------
+// home
+//----------------
+@import 'vars';
+
+.content{
+  height: auto;
+  display: grid;
+  background: rgba(#fff, 0);
+}
+
+#home{
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: $homeHeight;
+  width: $homeWidth;
+  z-index: $homeZ;
+  background-image: $homeBackgroundImage;
+  background-position: center;
+  background-size: cover;
+  h1{
+    line-height: $fontHomeTitlelineHeight;
+    width: 100%;
+    text-align: center;
+    color: $colorHeaderTitle;
+    font-family: $fontHomeTitle;
+    font-size: $fontHomeTitleSize;
+  }
+}
