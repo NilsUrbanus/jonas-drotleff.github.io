@@ -22,11 +22,13 @@ $headerTitleHiddenAnimationDelay: 0.03s;
 
 // home
 $homeZ: -2;
-$homeHeight: 100vh;
+$homeHeight: calc(100vh + 98px);
 $homeWidth: 100%;
 $homeBackgroundImage: url(../assets/background.jpg);
 
+$seperatorHeight: 98px;
+
 // about
 $aboutZ: -1;
-$aboutHeight: calc(100vh + 98px);
+$aboutHeight: 100vh;
 $aboutWidth: 100%;

@@ -3,29 +3,55 @@
 // home
 //----------------
 @import 'vars';
-
-.content{
-  height: auto;
-  display: grid;
-  background: rgba(#fff, 0);
+.content {
+    height: auto;
+    display: grid;
+    background: rgba(#fff, 0);
 }
-
-#home{
-  position: fixed;
-  top: 0;
-  left: 0;
-  height: $homeHeight;
-  width: $homeWidth;
-  z-index: $homeZ;
-  background-image: $homeBackgroundImage;
-  background-position: center;
-  background-size: cover;
-  h1{
-    line-height: $fontHomeTitlelineHeight;
+#home {
+    position: absolute;
+    top: 0;
+    left: 0;
     width: 100%;
-    text-align: center;
-    color: $colorHeaderTitle;
-    font-family: $fontHomeTitle;
-    font-size: $fontHomeTitleSize;
-  }
+    height: 10px;
+    pointer-events: none;
+}
+.home-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: $homeHeight;
+    width: $homeWidth;
+    z-index: $homeZ;
+    background-image: $homeBackgroundImage;
+    background-position: center;
+    background-size: cover;
+    h1 {
+        line-height: $fontHomeTitlelineHeight;
+        width: 100%;
+        margin-top: 98px;
+        opacity: 0;
+        text-align: center;
+        color: $colorHeaderTitle;
+        font-family: $fontHomeTitle;
+        font-size: $fontHomeTitleSize;
+    }
+}
+@-webkit-keyframes fade-in-h1 {
+    100% {
+        opacity: 1;
+        margin-top: 0;
+    }
+}
+@-moz-keyframes fade-in-h1 {
+    100% {
+        opacity: 1;
+        margin-top: 0;
+    }
+}
+@keyframes fade-in-h1 {
+    100% {
+        opacity: 1;
+        margin-top: 0;
+    }
 }
