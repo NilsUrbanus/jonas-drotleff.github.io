@@ -38,18 +38,27 @@
     }
 }
 @-webkit-keyframes fade-in-h1 {
+    50% {
+        opacity: .9;
+    }
     100% {
         opacity: 1;
         margin-top: 0;
     }
 }
 @-moz-keyframes fade-in-h1 {
+    50% {
+        opacity: .9;
+    }
     100% {
         opacity: 1;
         margin-top: 0;
     }
 }
 @keyframes fade-in-h1 {
+    50% {
+        opacity: .9;
+    }
     100% {
         opacity: 1;
         margin-top: 0;
