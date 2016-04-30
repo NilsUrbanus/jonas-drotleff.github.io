@@ -19,7 +19,7 @@ $headerTitleLineTop: calc(50% - 2px);
 $headerTitleHiddenAnimationDelay: 0.03s;
 
 // home
-$homeZ: -2;
+$homeZ: -1;
 $homeHeight: calc(100vh + 98px);
 $homeWidth: 100%;
 $homeBackgroundImage: url(../assets/background.jpg);
@@ -27,6 +27,6 @@ $homeBackgroundImage: url(../assets/background.jpg);
 $seperatorHeight: 98px;
 
 // about
-$aboutZ: -1;
+$aboutZ: 0;
 $aboutHeight: 100vh;
 $aboutWidth: 100%;

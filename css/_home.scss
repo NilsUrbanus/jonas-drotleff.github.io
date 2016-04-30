@@ -5,8 +5,6 @@
 @import 'vars';
 .content {
     height: auto;
-    display: grid;
-    background: rgba(#fff, 0);
 }
 #home {
     position: absolute;
@@ -36,6 +34,23 @@
         font-family: $fontHomeTitle;
         font-size: $fontHomeTitleSize;
     }
+    .home__scroll {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        height: 16px;
+        width: 100%;
+        margin-bottom: calc( 98px + 8px );
+        text-align: center;
+        animation: 2s arrow-animation infinite;
+        .home__scroll-arrow__icon {
+            line {
+                fill: none;
+                stroke: white;
+                stroke-width: 1;
+            }
+        }
+    }
 }
 @-webkit-keyframes fade-in-h1 {
     50% {
@@ -62,5 +77,14 @@
     100% {
         opacity: 1;
         margin-top: 0;
+    }
+}
+
+@keyframes arrow-animation {
+    50% {
+        transform: translateY(-4px);
+    }
+    100% {
+        transform: translateY(0);
     }
 }
