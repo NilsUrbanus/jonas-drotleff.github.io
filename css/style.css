@@ -3,7 +3,7 @@ body {
     color: rgba(219,5,5,.8);
     font-family: Roboto;
     font-weight: 800;
-    font-size: 74px;
+    font-size: 40px;
     margin: 0;
     padding: 0;
     text-align: center;
@@ -12,7 +12,7 @@ body {
 }
 @media screen and (max-width: 768px) {
     body {
-        font-size: 40px;
+        font-size: 24px;
     }
 }
 .comingsoon {

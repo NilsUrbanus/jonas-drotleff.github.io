@@ -6,5 +6,5 @@ $(function() {
     });
     setTimeout(function() {
         $('.comingsoon').fadeOut(500, function() {});
-    }, 6000);
+    }, 8500);
 });
