@@ -3,88 +3,38 @@
 
 <head>
     <meta charset="utf-8">
-
-    <title>Jonas Drotleff</title>
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="description" content="personal website of Jonas Drotleff">
-    <meta name="author" content="Jonas Drotleff">
-
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Jonas Drotleff</title>
 
-    <meta name="theme-color" content="#282828">
-    <meta name="apple-mobile-web-app-status-bar-style" content="white">
+    <meta name="theme-color" content="#E3D0D0">
 
-    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Playfair+Display:400,700,700italic,900,900italic" />
-    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:400,700,900,400italic" />
-    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
-    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Anton" />
-    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=PT+Mono" />
+    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:900" />
 
-    <link rel="stylesheet" type="text/css" href="./css/style.css" />
-
+    <!-- JQuery -->
     <script src="./js/frameworks/jquery-2.2.0.min.js"></script>
-    <script src="./js/frameworks/jquery.waypoints.min.js"></script>
-    <script src="./js/frameworks/smoothscroll.js"></script>
-    <script async src="./js/analytics.js"></script>
+    <script src="./js/frameworks/velocity.min.js"></script>
 
-    <!--[if lt IE 9]>
-    <script src = "http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-    <![endif]-->
+    <!-- typed -->
+    <script src="./js/frameworks/typed.min.js"></script>
+
+    <link rel="stylesheet" href="./css/style.css">
 </head>
 
 <body>
-    <header class="header">
-        <div class="header__drawer">
-            <input type="checkbox" id="drawer-toggle" name="drawer-toggle" />
-            <label class="ripple" for="drawer-toggle" class="drawer-toggle__label">
-                <svg version="1.1" class="drawer-toggle__label__icon" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 24 24" style="enable-background:new 0 0 24 24;width: 24px; height: 24px;" xml:space="preserve">
-                    <line class="hamburger__line__1" x1="0" y1="3.5" x2="24" y2="3.5" />
-                    <line class="hamburger__line__2" x1="0" y1="11.5" x2="24" y2="11.5" />
-                    <line class="hamburger__line__3" x1="0" y1="19.5" x2="24" y2="19.5" />
-                </svg>
-            </label>
+    <div class="comingsoon">
+        <div id="typed-strings">
+            <p>COMING ^500 SOON.</p>
+            <p>keep watching!<p>
         </div>
-        <nav class="header__nav">
-            <ul>
-                <li><a class="smoothScroll" href="#home">Home</a></li>
-                <li><a class="smoothScroll" href="#about">About</a></li>
-                <li><a class="smoothScroll" href="#work">Work</a></li>
-                <li><a class="smoothScroll" href="#contact">Contact</a></li>
-            </ul>
-        </nav>
-        <div class="header__drawer__overlay"></div>
-        <div class="header__background"></div>
-    </header>
-    <div id="home"></div>
-    <div class="content">
-        <div class="home-container">
-            <h1>Jonas Drotleff</h1>
-            <div class="home__scroll">
-                <a href="#about" class="smoothScroll">
-                    <svg version="1.1" class="home__scroll-arrow__icon" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 36 12" style="enable-background:new 0 0 36 12;width: 36px; height: 12px;" xml:space="preserve">
-                        <line class="arrow__line__1" x1="0" y1="0" x2="18" y2="12" />
-                        <line class="arrow__line__2" x1="36" y1="0" x2="18" y2="12" />
-                    </svg>
-                </a>
-            </div>
-        </div>
-        <div class="seperator"></div>
-        <div id="about">
-            <table>
-                <tbody>
-                    <tr>
-                        <td>
-                            <image src="./assets/section_indicator.svg"/>
-                        </td>
-                        <td>About</td>
-                    </tr>
-                </tbody>
-            </table>
-            <img src="./assets/profile.jpg" />
-        </div>
+        <span id="typed"></span>
     </div>
+    <img src="./assets/cursor.png">
 
-    <script src="./js/script.js"></script>
+    <script src="./js/index.js"></script>
+
 </body>
+
+<!-- Made with ♥ and mdl by Jonas Drotleff -->
 
 </html>
